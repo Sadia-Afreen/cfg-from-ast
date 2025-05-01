@@ -1,0 +1,4 @@
+digraph custom_m1 {
+"custom_m1" -> "while_1";
+"while_1" -> "wn_1";
+ }

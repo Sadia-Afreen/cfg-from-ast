@@ -1,0 +1,5 @@
+digraph custom_m6_CFG {
+	"custom_m6" -> "n_1";
+	"n_1" -> "r_1";
+	"r_1" -> "Exit";
+}

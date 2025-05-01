@@ -1,0 +1,6 @@
+digraph custom_m1_CFG {
+	"custom_m1" -> "while_1";
+	"while_1" -> "wn_1";
+	"while_1" -> "Exit" [style=dashed];
+	"wn_1" -> "while_1";
+}

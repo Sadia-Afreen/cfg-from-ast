@@ -1,0 +1,10 @@
+digraph custom_m8_CFG {
+	"custom_m8" -> "if_1";
+	"if_1" -> "n_1";
+	"if_1" -> "n_2" [style=dashed];
+	"n_1" -> "if_2";
+	"n_2" -> "if_2";
+	"if_2" -> "n_3";
+	"if_2" -> "Exit" [style=dashed];
+	"n_3" -> "Exit";
+}

@@ -1,0 +1,7 @@
+digraph custom_m8 {
+"custom_m8" -> "if_1";
+"custom_m8" -> "if_2";
+"if_1" -> "n_1";
+"if_1" -> "n_2"[style = dashed];
+"if_2" -> "n_3";
+ }

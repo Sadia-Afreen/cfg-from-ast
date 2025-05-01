@@ -1,0 +1,11 @@
+digraph custom_m4_CFG {
+	"custom_m4" -> "while_1";
+	"while_1" -> "wn_1";
+	"while_1" -> "Exit" [style=dashed];
+	"wn_1" -> "if_1";
+	"if_1" -> "r_1";
+	"if_1" -> "n_1" [style=dashed];
+	"r_1" -> "Exit";
+	"n_1" -> "wn_2";
+	"wn_2" -> "while_1";
+}

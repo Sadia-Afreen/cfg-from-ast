@@ -1,0 +1,8 @@
+digraph custom_m3 {
+"custom_m3" -> "while_1";
+"while_1" -> "wn_1";
+"while_1" -> "if_1";
+"while_1" -> "wn_2";
+"if_1" -> "n_1";
+"if_1" -> "r_1"[style = dashed];
+ }

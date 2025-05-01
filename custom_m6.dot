@@ -1,0 +1,5 @@
+digraph custom_m6 {
+"custom_m6" -> "n_1";
+"custom_m6" -> "r_1";
+"custom_m6" -> "n_2";
+ }
