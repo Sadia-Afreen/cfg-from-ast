@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import cfg.CFG;
 import org.junit.jupiter.api.Test;
 
 import ast.*;
@@ -15,11 +16,14 @@ class CreateAST {
 	void test1() {
 		MethodNode m = new MethodNode("m1");
 		AST ast = new AST(m);
+		CFG cfg = new CFG();
 		for(int i=0; i < 3; i++) {
 			Node n = new Node("n_" + i);
 			m.addNode(n);
 		}
 		ast.toDot();
+		cfg.fromAST(ast);
+		cfg.toDot();
 	}
 	
 	
@@ -27,6 +31,7 @@ class CreateAST {
 	void test2() {
 		MethodNode m = new MethodNode("m2");
 		AST ast = new AST(m);
+		CFG cfg = new CFG();
 		Node n = new Node("n_1");
 		m.addNode(n);
 		List<Node> truB = new ArrayList<Node>();
@@ -38,12 +43,15 @@ class CreateAST {
 		ifN.setTrueBlock(truB);
 		m.addNode(ifN);
 		ast.toDot();
+		cfg.fromAST(ast);
+		cfg.toDot();
 	}
 	
 	@Test
 	void test3() {
 		MethodNode m = new MethodNode("m3");
 		AST ast = new AST(m);
+		CFG cfg = new CFG();
 		Node n = new Node("n_1");
 		m.addNode(n);
 		IfNode ifN = new IfNode("if_1");
@@ -63,12 +71,15 @@ class CreateAST {
 		ifN.setFalseBlock(b);
 		m.addNode(ifN);
 		ast.toDot();
+		cfg.fromAST(ast);
+		cfg.toDot();
 	}
 	
 	@Test
 	void test4() {
 		MethodNode m = new MethodNode("m4");
 		AST ast = new AST(m);
+		CFG cfg = new CFG();
 		Node n = new Node("n_1");
 		m.addNode(n);
 		IfNode ifN = new IfNode("if_1");
@@ -96,6 +107,8 @@ class CreateAST {
 		ifN.setFalseBlock(b);
 		m.addNode(ifN);
 		ast.toDot();
+		cfg.fromAST(ast);
+		cfg.toDot();
 	}
 
 
